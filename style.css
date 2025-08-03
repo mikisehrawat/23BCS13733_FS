@@ -1,0 +1,149 @@
+/* Base Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #eef2f3, #f6f9fc);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Name Header Box */
+.box {
+    font-size: 2.8rem;
+    text-align: center;
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+/* Subheader Tagline */
+#d1 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0 20px 0;
+}
+
+/* Navigation Bar */
+a {
+    text-decoration: none;
+    color: #4b6cb7;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #dce4f7;
+    border-radius: 5px;
+}
+
+/* Section Titles */
+h3 {
+    margin-top: 35px;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #d1d1d1;
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styling */
+p {
+    margin: 15px 0;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* Skills List */
+ul {
+    margin-left: 20px;
+    list-style-type: circle;
+    font-size: 1rem;
+}
+
+/* Projects List */
+ol {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+/* Education Table */
+#t1 {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#t1 th,
+#t1 td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.dt {
+    background-color: #4b6cb7;
+    color: white;
+}
+
+/* Contact Form */
+form {
+    background-color: white;
+    padding: 25px;
+    max-width: 500px;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4b6cb7;
+    outline: none;
+    background-color: #f3f7ff;
+}
+
+button {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #5f7bd7, #2c3e70);
+}
+
+/* Footer */
+p:last-of-type {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
