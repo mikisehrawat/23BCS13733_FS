@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grocery Store Catalog</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1>Grocery Store</h1>
+				<p>
+					Filter groceries by category to find what you need
+				</p>
+			</header>
+
+			<div class="filter-section">
+				<label for="categoryFilter">Filter by Category:</label>
+				<select id="categoryFilter" class="filter-dropdown">
+					<option value="all">All Categories</option>
+					<option value="fruits">Fruits</option>
+					<option value="vegetables">Vegetables</option>
+					<option value="dairy">Dairy</option>
+					<option value="bakery">Bakery</option>
+					<option value="beverages">Beverages</option>
+					<option value="snacks">Snacks</option>
+				</select>
+
+				<div class="results-info">
+					<span id="resultCount">Showing all products</span>
+				</div>
+			</div>
+			<div class="products-grid" id="productsGrid">
+				<!-- Products will be dynamically inserted here -->
+			</div>
+
+			<div class="no-results" id="noResults" style="display: none">
+				<h3>No products found</h3>
+				<p>Try selecting a different category</p>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

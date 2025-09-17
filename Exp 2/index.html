@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">Dashboard</div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#" class="nav-link active" data-page="Dashboard">Dashboard</a></li>
+                    <li><a href="#" class="nav-link" data-page="Users">Users</a></li>
+                    <li><a href="#" class="nav-link" data-page="Products">Products</a></li>
+                    <li><a href="#" class="nav-link" data-page="Settings">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="header">
+            <button class="menu-btn" id="menuBtn">☰</button>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </header>
+
+        <main class="main">
+            <h1 class="page-title" id="pageTitle">Dashboard</h1>
+
+            <div class="dashboard-content" id="dashboardContent">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3>567</h3>
+                            <p>Products</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3>$89k</h3>
+                            <p>Revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-icon">🛒</span>
+                            <span class="activity-text">New order received</span>
+                            <span class="activity-time">2m ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">👤</span>
+                            <span class="activity-text">New user registered</span>
+                            <span class="activity-time">5m ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
