@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrail - Leaderboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">⏱️ TimeTrail</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="sessions.html">Sessions</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="leaderboard.html" class="active">Leaderboard</a>
+            <a href="profile.html">Profile</a>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+    </div>
+</nav>
+
+<div class="main-container">
+    <h1>🏆 Leaderboard</h1>
+
+    <div class="leaderboard-filters">
+        <select id="timeFilter" class="filter-select">
+            <option value="all">All Time</option>
+            <option value="daily">Today</option>
+            <option value="weekly">This Week</option>
+            <option value="monthly">This Month</option>
+        </select>
+        <select id="categoryFilter" class="filter-select">
+            <option value="points">By Points</option>
+            <option value="time">By Total Time</option>
+            <option value="sessions">By Sessions</option>
+            <option value="streak">By Streak</option>
+        </select>
+    </div>
+
+    <div class="leaderboard-card">
+        <div class="podium">
+            <div class="podium-place second" id="rank2">
+                <div class="rank-medal">🥈</div>
+                <div class="rank-info">
+                    <h3>-</h3>
+                    <p>0 pts</p>
+                </div>
+            </div>
+            <div class="podium-place first" id="rank1">
+                <div class="rank-medal">🥇</div>
+                <div class="rank-info">
+                    <h3>-</h3>
+                    <p>0 pts</p>
+                </div>
+            </div>
+            <div class="podium-place third" id="rank3">
+                <div class="rank-medal">🥉</div>
+                <div class="rank-info">
+                    <h3>-</h3>
+                    <p>0 pts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="leaderboard-list">
+            <table class="leaderboard-table">
+                <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>User</th>
+                    <th>Points</th>
+                    <th>Sessions</th>
+                    <th>Total Time</th>
+                    <th>Streak</th>
+                </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                <tr>
+                    <td colspan="6" class="empty-state">Loading leaderboard...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

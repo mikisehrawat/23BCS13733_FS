@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrail - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">⏱️ TimeTrail</div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="sessions.html">Sessions</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="profile.html">Profile</a>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+    </div>
+</nav>
+
+<div class="main-container">
+    <div class="dashboard-header">
+        <h1>Welcome, <span id="username"></span>!</h1>
+        <p class="subtitle">Track your focus sessions and improve your productivity</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-info">
+                <h3 id="totalSessions">0</h3>
+                <p>Total Sessions</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-info">
+                <h3 id="totalTime">0h</h3>
+                <p>Total Time</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-info">
+                <h3 id="currentStreak">0</h3>
+                <p>Day Streak</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-info">
+                <h3 id="totalPoints">0</h3>
+                <p>Total Points</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="card">
+            <h2>Quick Start Session</h2>
+            <form id="quickSessionForm">
+                <div class="form-group">
+                    <label for="sessionTitle">Session Title</label>
+                    <input type="text" id="sessionTitle" placeholder="What are you working on?" required>
+                </div>
+                <div class="form-group">
+                    <label for="sessionDuration">Duration (minutes)</label>
+                    <input type="number" id="sessionDuration" placeholder="25" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="sessionTags">Tags (comma-separated)</label>
+                    <input type="text" id="sessionTags" placeholder="study, work, coding">
+                </div>
+                <button type="submit" class="btn btn-primary">Start Session</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Recent Sessions</h2>
+            <div id="recentSessions" class="session-list">
+                <p class="empty-state">No sessions yet. Start your first one!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Your Tags</h2>
+        <div id="tagsContainer" class="tags-container">
+            <p class="empty-state">No tags yet.</p>
+        </div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

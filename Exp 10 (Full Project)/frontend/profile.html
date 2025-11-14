@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrail - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">⏱️ TimeTrail</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="sessions.html">Sessions</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="profile.html" class="active">Profile</a>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+    </div>
+</nav>
+
+<div class="main-container">
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <span id="avatarInitial">U</span>
+            </div>
+            <div class="profile-info">
+                <h1 id="profileUsername">Username</h1>
+                <p id="profileEmail">email@example.com</p>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat-item">
+                <h3 id="profileTotalSessions">0</h3>
+                <p>Total Sessions</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="profileTotalTime">0h</h3>
+                <p>Total Time</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="profileStreak">0</h3>
+                <p>Current Streak</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="profilePoints">0</h3>
+                <p>Total Points</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Account Settings</h2>
+            <form id="updateProfileForm">
+                <div class="form-group">
+                    <label for="updateUsername">Username</label>
+                    <input type="text" id="updateUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateEmail">Email</label>
+                    <input type="email" id="updateEmail" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Change Password</h2>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+            <div id="passwordMessage" class="message"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
