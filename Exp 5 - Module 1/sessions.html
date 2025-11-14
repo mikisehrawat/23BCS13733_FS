@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrail - Sessions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">⏱️ TimeTrail</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="sessions.html" class="active">Sessions</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="profile.html">Profile</a>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+    </div>
+</nav>
+
+<div class="main-container">
+    <div class="page-header">
+        <h1>Your Sessions</h1>
+        <button id="newSessionBtn" class="btn btn-primary">+ New Session</button>
+    </div>
+
+    <div class="filters">
+        <select id="statusFilter" class="filter-select">
+            <option value="">All Statuses</option>
+            <option value="IN_PROGRESS">In Progress</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="PAUSED">Paused</option>
+            <option value="CANCELLED">Cancelled</option>
+        </select>
+        <input type="date" id="dateFilter" class="filter-input">
+        <input type="text" id="searchFilter" class="filter-input" placeholder="Search sessions...">
+    </div>
+
+    <div id="sessionsGrid" class="sessions-grid">
+        <p class="empty-state">Loading sessions...</p>
+    </div>
+</div>
+
+<!-- Modal for creating/editing session -->
+<div id="sessionModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">New Session</h2>
+        <form id="sessionForm">
+            <input type="hidden" id="sessionId">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration (minutes)</label>
+                <input type="number" id="duration" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="sessionType">Type</label>
+                <select id="sessionType">
+                    <option value="FOCUS">Focus</option>
+                    <option value="BREAK">Break</option>
+                    <option value="LONG_BREAK">Long Break</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags</label>
+                <input type="text" id="tags" placeholder="Comma-separated">
+            </div>
+            <div class="form-group">
+                <label for="roomId">Room (optional)</label>
+                <select id="roomId">
+                    <option value="">No Room</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/sessions.js"></script>
+</body>
+</html>
